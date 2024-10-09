@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PrevisaoMeteorologica.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Label
+                Text="Previsão do tempo"
+                FontAttributes="Bold"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="35"
+                HorizontalOptions="Center" 
+                VerticalTextAlignment="Center"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+
+            <Picker 
+                x:Name="EstadoPicker"
+                Title="Selecione o Estado"
+                HorizontalOptions="Center"
+                WidthRequest="275" 
+                HeightRequest="80"
+                FontAttributes="Bold">  
+
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>SP</x:String>
+                        <x:String>MG</x:String>
+                        <x:String>RJ</x:String>
+                        <x:String>ES</x:String>
+                        <x:String>RS</x:String>
+                        <x:String>AM</x:String>
+                        <x:String>MT</x:String>
+                        <x:String>CE</x:String>
+                        <x:String>BA</x:String>
+                        <x:String>TO</x:String>
+                        <x:String>AC</x:String>
+                        <x:String>PI</x:String>
+                        <x:String>MA</x:String>
+                        <x:String>RN</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Picker 
+                x:Name="CidadePicker"
+                Title="Selecione a Cidade"
+                HorizontalOptions="Center"
+                WidthRequest="275" 
+                HeightRequest="80"
+                FontAttributes="Bold">
+
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                        <x:String>Brejo Alegre</x:String>
+                    </x:Array>
+            </Picker.ItemsSource>
+            </Picker>
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Enviar" 
+                SemanticProperties.Hint="Counts the number of times you click"
+                HorizontalOptions="Fill" 
+                WidthRequest="275" 
+                HeightRequest="80"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
